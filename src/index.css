@@ -6,10 +6,15 @@
 
 html {
   font-family: 'Noto Sans JP', sans-serif;
+  min-height: 100%;
 }
 
 body {
+  min-height: 100%;
   margin: 0;
-  background-color: #bb9c74;
+  /* background-color: #bb9c74; */
+  background: linear-gradient(#844d008e, #3a24088e), url(https://adonius.club/uploads/posts/2022-01/1642161898_95-adonius-club-p-derevyannii-stol-fon-100.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 

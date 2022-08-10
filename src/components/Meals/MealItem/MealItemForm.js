@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import Input from "./../../UI/Input";
 import classes from "./MealItemForm.module.css";
 
-const MealItemForm = ({ id, onAddToCart }) => {
+const MealItemForm = ({ id, onAddToCart, amount}) => {
   const amountInputRef = useRef();
 
   const submitHandler = (event) => {
@@ -35,6 +35,7 @@ const MealItemForm = ({ id, onAddToCart }) => {
         }}
       />
       <button>+ Добавить</button>
+      <p>Добавлено: {amount}шт.</p>
     </form>
   );
 };

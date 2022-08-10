@@ -5,6 +5,9 @@ import classes from "./MealItem.module.css";
 
 const MealItem = ({ name, description, price, id }) => {
   const ctx = useContext(CartContext);
+
+  const current = ctx.items.findIndex((item) => item.id === id);
+  const amountInCart = ctx.items[current]?.amount ?? 0;
   const addToCartHandler = (amount) => {
     ctx.addItem({
       key: id,
@@ -21,9 +24,11 @@ const MealItem = ({ name, description, price, id }) => {
         <p className={classes.description}>{description}</p>
         <span className={classes.price}>{price}₽</span>
       </div>
-      <div>
-        <MealItemForm id={id} onAddToCart={addToCartHandler} />
-      </div>
+      <MealItemForm
+        id={id}
+        onAddToCart={addToCartHandler}
+        amount={amountInCart}
+      />
     </li>
   );
 };
