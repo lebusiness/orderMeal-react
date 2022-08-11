@@ -1,8 +1,8 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Input from "./../../UI/Input";
 import classes from "./MealItemForm.module.css";
 
-const MealItemForm = ({ id, onAddToCart, amount}) => {
+const MealItemForm = ({ id, onAddToCart, amount }) => {
   const amountInputRef = useRef();
 
   const submitHandler = (event) => {

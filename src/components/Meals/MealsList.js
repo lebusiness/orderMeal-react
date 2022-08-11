@@ -13,8 +13,8 @@ const MealsList = () => {
         "https://ordermeal-c0474-default-rtdb.europe-west1.firebasedatabase.app/meals.json"
       );
 
-      if(!response.ok) {
-        throw new Error('Что-то пошло не так...');
+      if (!response.ok) {
+        throw new Error("Что-то пошло не так...");
       }
 
       const responseData = await response.json();
@@ -32,10 +32,9 @@ const MealsList = () => {
       setMeals(loadedMeals);
     };
 
-    featchMeals().catch(error => {
+    featchMeals().catch((error) => {
       setHttpEror(error.message);
-    })
-    
+    });
   }, []);
 
   const mealsList = meals.map((meal) => (
@@ -49,12 +48,12 @@ const MealsList = () => {
   ));
 
   if (httpEror) {
-    return <p className={classes.error}>{httpEror}</p>
+    return <p className={classes.error}>{httpEror}</p>;
   }
   return (
     <>
       {meals.length === 0 && (
-        <div class={classes['lds-ring']}>
+        <div className={classes["lds-ring"]}>
           <div></div>
           <div></div>
           <div></div>

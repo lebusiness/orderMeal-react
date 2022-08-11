@@ -14,7 +14,7 @@ const HeaderCartButton = ({ onClick }) => {
     }
 
     setBtnIsHighlighted(true);
-    const timer = setTimeout(() => {
+    setTimeout(() => {
       setBtnIsHighlighted(false);
     }, 200);
     // return () => {
