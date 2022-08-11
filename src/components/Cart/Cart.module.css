@@ -44,3 +44,15 @@
   background-color: #8a2b06;
   color: white;
 }
+
+@media (max-width: 768px) {
+  .actions button {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .total {
+    font-size: 22px;
+  }
+}

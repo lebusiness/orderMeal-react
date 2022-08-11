@@ -27,7 +27,11 @@
     left: calc(50% - 20rem);
   }
 }
-
+@media (max-width: 568px) {
+  .modal {
+    top: 5vh
+  }
+}
 @keyframes slide-down {
   from {
     opacity: 0;

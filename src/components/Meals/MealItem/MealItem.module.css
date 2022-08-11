@@ -25,4 +25,10 @@
     justify-content: flex-end;
     flex-direction: column;
   }
+  .meal button{
+    margin-top: 10px;
+  }
+  .meal p{
+    margin-top: 8px;
+  }
 }
